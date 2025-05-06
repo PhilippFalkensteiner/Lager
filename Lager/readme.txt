@@ -7,9 +7,9 @@ Funktionen:
 
 🔍 Nach Artikelnummer suchen
 
-✏️ Artikelbestand ändern
-
 🗑️ Artikel löschen
+
+✏️ Artikelbestand ändern
 
 Technologie:
 

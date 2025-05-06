@@ -11,6 +11,6 @@
         Title="Home"
         ContentTemplate="{DataTemplate views:MainPage}"
         Route="MainPage" />
-    hwidjhiwedf
+    
 
 </Shell>
