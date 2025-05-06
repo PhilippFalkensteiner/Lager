@@ -2,14 +2,16 @@
 Funktionen:
 
 📦 Artikel anlegen (Name, Artikelnummer, Preis, Anzahl)
+- Frontend = Seite
+- Backend = Datenbank
 
 📋 Alle Artikel anzeigen
 
 🔍 Nach Artikelnummer suchen
 
-✏️ Artikelbestand ändern
-
 🗑️ Artikel löschen
+
+✏️ Artikelbestand ändern
 
 Technologie:
 
