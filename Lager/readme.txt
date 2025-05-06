@@ -2,8 +2,8 @@
 Funktionen:
 
 📦 Artikel anlegen (Name, Artikelnummer, Preis, Anzahl)
-- Frontend = Seite
-- Backend = Datenbank
+- Frontend = Seite - Maxi
+- Backend = Datenbank - Phili
 
 📋 Alle Artikel anzeigen
 
