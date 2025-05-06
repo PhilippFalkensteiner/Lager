@@ -11,6 +11,9 @@
         Title="Home"
         ContentTemplate="{DataTemplate views:MainPage}"
         Route="MainPage" />
-    
-
+    <ShellContent
+    Title="Produkt hinzufügen"
+    ContentTemplate="{DataTemplate views:AddProducts}"
+    Route="Produkt hinzufügen"
+        />
 </Shell>
