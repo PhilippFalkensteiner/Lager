@@ -2,15 +2,74 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lager.Views.AddProducts"
-             Title="AddProducts">
-    <VerticalStackLayout>
-        <Label
-             Text="Produkt hinzufügen"
-             HorizontalOptions="Center"
-             FontSize="28"
-             FontAttributes="Bold"
-             TextColor="Yellow"/>
+             Title="Produkt hinzufügen">
 
+    <Grid RowDefinitions="Auto, *"
+          ColumnDefinitions="*, Auto"
+          Padding="20">
 
-    </VerticalStackLayout>
+        <Image Grid.Row="0" Grid.Column="1"
+               Source="addproduct.png"
+               HeightRequest="100"
+               WidthRequest="100"
+               HorizontalOptions="End"
+               VerticalOptions="Start"
+               Aspect="AspectFit"
+               Margin="0,0,0,10"/>
+
+        <VerticalStackLayout Grid.Row="1" Grid.ColumnSpan="2" Spacing="24">
+
+            <Label Text="Produkt hinzufügen"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   TextColor="#FFC107"
+                   HorizontalOptions="Center"/>
+
+            <Grid RowDefinitions="Auto, Auto, Auto"
+                  ColumnDefinitions="Auto, *"
+                  ColumnSpacing="12"
+                  RowSpacing="16"
+                  Padding="0,10">
+
+                <Label Text="Produktname:"
+                       Grid.Row="0" Grid.Column="0"
+                       FontSize="18"
+                       VerticalTextAlignment="Center"/>
+
+                <Entry Text="{Binding Name}"
+                       Grid.Row="0" Grid.Column="1"
+                       FontSize="16"/>
+
+                <Label Text="Preis (€):"
+                       Grid.Row="1" Grid.Column="0"
+                       FontSize="18"
+                       VerticalTextAlignment="Center"/>
+
+                <Entry Text="{Binding Preis}"
+                       Grid.Row="1" Grid.Column="1"
+                       Keyboard="Numeric"
+                       FontSize="16"/>
+
+                <Label Text="Anzahl:"
+                       Grid.Row="2" Grid.Column="0"
+                       FontSize="18"
+                       VerticalTextAlignment="Center"/>
+
+                <Picker Title="Anzahl"
+                        Grid.Row="2" Grid.Column="1"
+                        ItemsSource="{Binding ListInt}"
+                        FontSize="16"/>
+            </Grid>
+
+            <Button Text="Hinzufügen"
+                    FontAttributes="Bold"
+                    BackgroundColor="#4CAF50"
+                    TextColor="White"
+                    FontSize="18"
+                    CornerRadius="12"
+                    HeightRequest="48"
+                    WidthRequest="160"
+                    HorizontalOptions="Center"/>
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>

@@ -1,4 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui;
+using Lager.Services;
+using Lager.ViewModels;
+using Lager.Views;
+using Microsoft.Extensions.Logging;
 
 namespace Lager;
 
@@ -9,7 +13,8 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
-			.ConfigureFonts(fonts =>
+			.UseMauiCommunityToolkit()
+            .ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
@@ -18,7 +23,10 @@ public static class MauiProgram
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
-
-		return builder.Build();
+		builder.Services.AddTransient<MainPage>();
+        builder.Services.AddTransient<AddProducts>();
+        builder.Services.AddTransient<AddProductViewModel>();
+		builder.Services.AddTransient<DbManagerSQLite>(); 
+        return builder.Build();
 	}
 }
