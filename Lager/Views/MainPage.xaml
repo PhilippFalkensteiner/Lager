@@ -9,7 +9,9 @@
             Spacing="25">
             <Image
                 Source="C:\Users\pfalk\OneDrive\Desktop\lager_mit_text_2zeilen.png"
-                HeightRequest="1000"
+                
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
                 Aspect="AspectFit"
                 SemanticProperties.Description="dot net bot in a hovercraft number nine" />
 
