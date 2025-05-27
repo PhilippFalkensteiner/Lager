@@ -26,7 +26,7 @@
             <Label Text="Produkt löschen"
              FontSize="26"
              FontAttributes="Bold"
-             TextColor="#F44336"
+             TextColor="Red"
              HorizontalOptions="Center"/>
 
             <!-- Eingabemaske -->
@@ -64,7 +64,7 @@
             <!-- Löschen-Button -->
             <Button Text="Löschen"
               FontAttributes="Bold"
-              BackgroundColor="#F44336"
+              BackgroundColor="Red"
               TextColor="White"
               FontSize="18"
               CornerRadius="12"

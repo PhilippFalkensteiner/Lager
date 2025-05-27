@@ -26,7 +26,7 @@
             <Label Text="Produkt suchen"
              FontSize="26"
              FontAttributes="Bold"
-             TextColor="#2196F3"
+             TextColor="Blue"
              HorizontalOptions="Center"/>
 
             <!-- Eingabemaske -->
@@ -53,7 +53,7 @@
             <!-- Suchen-Button -->
             <Button Text="Suchen"
               FontAttributes="Bold"
-              BackgroundColor="#4CAF50"
+              BackgroundColor="Green"
               TextColor="White"
               FontSize="18"
               CornerRadius="12"
@@ -68,14 +68,14 @@
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame BorderColor="#DDDDDD"
+                        <Frame BorderColor="White"
                    CornerRadius="8"
                    Padding="10"
                    Margin="0,5">
 
                             <Label Text="{Binding Name}"
                      FontSize="18"
-                     TextColor="#333333"/>
+                     TextColor="Gray"/>
 
                         </Frame>
                     </DataTemplate>
