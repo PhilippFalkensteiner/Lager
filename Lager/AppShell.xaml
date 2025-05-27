@@ -14,6 +14,16 @@
     <ShellContent
     Title="Produkt hinzufügen"
     ContentTemplate="{DataTemplate views:AddProducts}"
-    Route="Produkt hinzufügen"
+    Route="Produkt hinzufügen"/>
+    <ShellContent
+     Title="Produkt suchen"
+     ContentTemplate="{DataTemplate views:SearchProducts}"
+     Route="Produkt suchen"
         />
+    <ShellContent
+     Title="Produkt löschen"
+     ContentTemplate="{DataTemplate views:DeleteProducts}"
+     Route="Produkt löschen"
+            />
+ 
 </Shell>
