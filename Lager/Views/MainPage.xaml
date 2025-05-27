@@ -8,8 +8,8 @@
             Padding="30,0"
             Spacing="25">
             <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
+                Source="C:\Users\pfalk\OneDrive\Desktop\lager_mit_text_2zeilen.png"
+                HeightRequest="1000"
                 Aspect="AspectFit"
                 SemanticProperties.Description="dot net bot in a hovercraft number nine" />
 
