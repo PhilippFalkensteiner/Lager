@@ -54,7 +54,7 @@
                FontSize="18"
                VerticalTextAlignment="Center"/>
 
-                <!-- Picker für Anzahl ohne Title -->
+                <!-- Picker für Anzahl -->
                 <Picker Grid.Row="1" Grid.Column="1"
                 ItemsSource="{Binding ListInt}"
                 FontSize="16"/>
