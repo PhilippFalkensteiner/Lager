@@ -1,12 +1,90 @@
 <?xml version="1.0" encoding="utf-8" ?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lager.Views.SearchProducts"
-             Title="SearchProducts">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Produkt suchen">
+
+    <Grid RowDefinitions="Auto, *"
+        ColumnDefinitions="*, Auto"
+        Padding="20">
+
+        <!-- Such-Icon -->
+        <Image Grid.Row="0" Grid.Column="1"
+           Source="search.png"
+           HeightRequest="100"
+           WidthRequest="100"
+           HorizontalOptions="End"
+           VerticalOptions="Start"
+           Aspect="AspectFit"
+           Margin="0,0,0,10"/>
+
+        <!-- Inhalt -->
+        <VerticalStackLayout Grid.Row="1" Grid.ColumnSpan="2" Spacing="24">
+
+            <!-- Überschrift -->
+            <Label Text="Produkt suchen"
+             FontSize="26"
+             FontAttributes="Bold"
+             TextColor="#2196F3"
+             HorizontalOptions="Center"/>
+
+            <!-- Eingabemaske -->
+            <Grid RowDefinitions="Auto, Auto"
+            ColumnDefinitions="Auto, *"
+            ColumnSpacing="12"
+            RowSpacing="16"
+            Padding="0,10">
+
+                <!-- Label für Suchbegriff -->
+                <Label Text="Produktname:"
+               Grid.Row="0" Grid.Column="0"
+               FontSize="18"
+               VerticalTextAlignment="Center"/>
+
+                <!-- Eingabefeld für Suchbegriff -->
+                <Entry Text="{Binding Suchbegriff}"
+               Grid.Row="0" Grid.Column="1"
+               FontSize="16"
+               Placeholder="Produkt eingeben"/>
+
+            </Grid>
+
+            <!-- Suchen-Button -->
+            <Button Text="Suchen"
+              FontAttributes="Bold"
+              BackgroundColor="#4CAF50"
+              TextColor="White"
+              FontSize="18"
+              CornerRadius="12"
+              HeightRequest="48"
+              WidthRequest="160"
+              HorizontalOptions="Center"
+              Command="{Binding SucheProduktCommand}"/>
+
+            <!-- Ergebnisliste -->
+            <CollectionView ItemsSource="{Binding GefundeneProdukte}"
+                      HeightRequest="300">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BorderColor="#DDDDDD"
+                   CornerRadius="8"
+                   Padding="10"
+                   Margin="0,5">
+
+                            <Label Text="{Binding Name}"
+                     FontSize="18"
+                     TextColor="#333333"/>
+
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </VerticalStackLayout>
+
+    </Grid>
+
 </ContentPage>

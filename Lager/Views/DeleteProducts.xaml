@@ -1,12 +1,80 @@
 <?xml version="1.0" encoding="utf-8" ?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lager.Views.DeleteProducts"
-             Title="DeleteProducts">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Produkt löschen">
+
+    <Grid RowDefinitions="Auto, *"
+        ColumnDefinitions="*, Auto"
+        Padding="20">
+
+        <!-- Lösch-Icon -->
+        <Image Grid.Row="0" Grid.Column="1"
+           Source="deleteproduct.png"
+           HeightRequest="100"
+           WidthRequest="100"
+           HorizontalOptions="End"
+           VerticalOptions="Start"
+           Aspect="AspectFit"
+           Margin="0,0,0,10"/>
+
+        <!-- Inhalt -->
+        <VerticalStackLayout Grid.Row="1" Grid.ColumnSpan="2" Spacing="24">
+
+            <!-- Überschrift -->
+            <Label Text="Produkt löschen"
+             FontSize="26"
+             FontAttributes="Bold"
+             TextColor="#F44336"
+             HorizontalOptions="Center"/>
+
+            <!-- Eingabemaske -->
+            <Grid RowDefinitions="Auto, Auto"
+            ColumnDefinitions="Auto, *"
+            ColumnSpacing="12"
+            RowSpacing="16"
+            Padding="0,10">
+
+                <!-- Label für Produktname -->
+                <Label Text="Produktname:"
+               Grid.Row="0" Grid.Column="0"
+               FontSize="18"
+               VerticalTextAlignment="Center"/>
+
+                <!-- Eingabefeld für Produktname -->
+                <Entry Text="{Binding Name}"
+               Grid.Row="0" Grid.Column="1"
+               FontSize="16"
+               Placeholder="Produkt eingeben"/>
+
+                <!-- Label für Anzahl -->
+                <Label Text="Anzahl:"
+               Grid.Row="1" Grid.Column="0"
+               FontSize="18"
+               VerticalTextAlignment="Center"/>
+
+                <!-- Picker für Anzahl ohne Title -->
+                <Picker Grid.Row="1" Grid.Column="1"
+                ItemsSource="{Binding ListInt}"
+                FontSize="16"/>
+
+            </Grid>
+
+            <!-- Löschen-Button -->
+            <Button Text="Löschen"
+              FontAttributes="Bold"
+              BackgroundColor="#F44336"
+              TextColor="White"
+              FontSize="18"
+              CornerRadius="12"
+              HeightRequest="48"
+              WidthRequest="160"
+              HorizontalOptions="Center"
+              Command="{Binding LoescheProduktCommand}"/>
+
+        </VerticalStackLayout>
+
+    </Grid>
+
 </ContentPage>
