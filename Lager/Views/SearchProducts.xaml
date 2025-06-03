@@ -9,7 +9,7 @@
         ColumnDefinitions="*, Auto"
         Padding="20">
 
-        <!-- Such-Icon -->
+      
         <Image Grid.Row="0" Grid.Column="1"
            Source="search.png"
            HeightRequest="100"
@@ -19,30 +19,30 @@
            Aspect="AspectFit"
            Margin="0,0,0,10"/>
 
-        <!-- Inhalt -->
+      
         <VerticalStackLayout Grid.Row="1" Grid.ColumnSpan="2" Spacing="24">
 
-            <!-- Überschrift -->
+           
             <Label Text="Produkt suchen"
              FontSize="26"
              FontAttributes="Bold"
              TextColor="Blue"
              HorizontalOptions="Center"/>
 
-            <!-- Eingabemaske -->
+           
             <Grid RowDefinitions="Auto, Auto"
             ColumnDefinitions="Auto, *"
             ColumnSpacing="12"
             RowSpacing="16"
             Padding="0,10">
 
-                <!-- Label für Suchbegriff -->
+                
                 <Label Text="Produktname:"
                Grid.Row="0" Grid.Column="0"
                FontSize="18"
                VerticalTextAlignment="Center"/>
 
-                <!-- Eingabefeld für Suchbegriff -->
+               
                 <Entry Text="{Binding Suchbegriff}"
                Grid.Row="0" Grid.Column="1"
                FontSize="16"
@@ -50,7 +50,7 @@
 
             </Grid>
 
-            <!-- Suchen-Button -->
+           
             <Button Text="Suchen"
               FontAttributes="Bold"
               BackgroundColor="Green"
@@ -62,7 +62,7 @@
               HorizontalOptions="Center"
               Command="{Binding SucheProduktCommand}"/>
 
-            <!-- Ergebnisliste -->
+            
             <CollectionView ItemsSource="{Binding GefundeneProdukte}"
                       HeightRequest="300">
 

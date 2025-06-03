@@ -9,7 +9,7 @@
         ColumnDefinitions="*, Auto"
         Padding="20">
 
-        <!-- Lösch-Icon -->
+        
         <Image Grid.Row="0" Grid.Column="1"
            Source="deleteproduct.png"
            HeightRequest="100"
@@ -19,49 +19,48 @@
            Aspect="AspectFit"
            Margin="0,0,0,10"/>
 
-        <!-- Inhalt -->
+        
         <VerticalStackLayout Grid.Row="1" Grid.ColumnSpan="2" Spacing="24">
 
-            <!-- Überschrift -->
+           
             <Label Text="Produkt löschen"
              FontSize="26"
              FontAttributes="Bold"
              TextColor="Red"
              HorizontalOptions="Center"/>
 
-            <!-- Eingabemaske -->
             <Grid RowDefinitions="Auto, Auto"
             ColumnDefinitions="Auto, *"
             ColumnSpacing="12"
             RowSpacing="16"
             Padding="0,10">
 
-                <!-- Label für Produktname -->
+               
                 <Label Text="Produktname:"
                Grid.Row="0" Grid.Column="0"
                FontSize="18"
                VerticalTextAlignment="Center"/>
 
-                <!-- Eingabefeld für Produktname -->
+                
                 <Entry Text="{Binding Name}"
                Grid.Row="0" Grid.Column="1"
                FontSize="16"
                Placeholder="Produkt eingeben"/>
 
-                <!-- Label für Anzahl -->
+                
                 <Label Text="Anzahl:"
                Grid.Row="1" Grid.Column="0"
                FontSize="18"
                VerticalTextAlignment="Center"/>
 
-                <!-- Picker für Anzahl -->
+               
                 <Picker Grid.Row="1" Grid.Column="1"
                 ItemsSource="{Binding ListInt}"
                 FontSize="16"/>
 
             </Grid>
 
-            <!-- Löschen-Button -->
+            
             <Button Text="Löschen"
               FontAttributes="Bold"
               BackgroundColor="Red"
