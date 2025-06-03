@@ -75,6 +75,9 @@
 	  <MauiXaml Update="Views\DeleteProducts.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Inventory.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\SearchProducts.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

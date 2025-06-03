@@ -25,5 +25,11 @@
      ContentTemplate="{DataTemplate views:DeleteProducts}"
      Route="Produkt löschen"
             />
- 
+
+    <ShellContent
+     Title="Lagerbestand anzeigen"
+     ContentTemplate="{DataTemplate views:Inventory}"
+     Route="Lagerbestand anzeigen"
+            />
+
 </Shell>
