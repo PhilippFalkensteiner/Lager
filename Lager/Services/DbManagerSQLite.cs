@@ -21,7 +21,8 @@ namespace Lager.Services
            
             string dbPath = Path.Combine(FileSystem.AppDataDirectory, "app_db_local.db3");
 
-            // 
+            // C:\\Users\\maxim\\AppData\\Local\\User Name\\com.companyname.lager\\Data\\app_db_local.db3
+            // C:\Users\maxim\AppData\Local\User Name\com.companyname.lager\Data
 
             optionsBuilder.UseSqlite($"Filename={dbPath}");
 

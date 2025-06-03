@@ -22,7 +22,7 @@
             <Label Text="Produkt hinzufügen"
                    FontSize="26"
                    FontAttributes="Bold"
-                   TextColor="#FFC107"
+                   TextColor="Yellow"
                    HorizontalOptions="Center"/>
 
             <Grid RowDefinitions="Auto, Auto, Auto"
@@ -58,7 +58,8 @@
                 <Picker Title="Anzahl"
                         Grid.Row="2" Grid.Column="1"
                         ItemsSource="{Binding ListInt}"
-                        FontSize="16"/>
+                        FontSize="16"
+                        SelectedItem="{Binding SelectedCount}"/>
             </Grid>
 
             <Button Text="Hinzufügen"
@@ -69,7 +70,8 @@
                     CornerRadius="12"
                     HeightRequest="48"
                     WidthRequest="160"
-                    HorizontalOptions="Center"/>
+                    HorizontalOptions="Center"
+                    Command="{Binding AddCommand}"/>
         </VerticalStackLayout>
     </Grid>
 </ContentPage>

@@ -26,7 +26,14 @@ public static class MauiProgram
 		builder.Services.AddTransient<MainPage>();
         builder.Services.AddTransient<AddProducts>();
         builder.Services.AddTransient<AddProductViewModel>();
-		builder.Services.AddTransient<DbManagerSQLite>(); 
+		// Del. Fun.
+        builder.Services.AddTransient<DeleteProducts>();
+        builder.Services.AddTransient<DeleteProductsViewModel>();
+		// Search Fun.
+        builder.Services.AddTransient<SearchProducts>();
+        builder.Services.AddTransient<SearchProductViewModel>();
+		// SQLite
+        builder.Services.AddTransient<DbManagerSQLite>(); 
         return builder.Build();
 	}
 }

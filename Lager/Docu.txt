@@ -1,0 +1,5 @@
+﻿Viewmodel:
+Button Funktion hinzufügen mit Relaycommand
+Variablen verbinden mit ObservaleP.
+DbManager ctor initialisieren
+

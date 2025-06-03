@@ -13,12 +13,11 @@ Startseite
 📋 Alle Artikel anzeigen
 
 🔍 Nach Artikelnummer suchen
+- F done
+
 
 🗑️ Artikel löschen
-
-✏️ Artikelbestand ändern
-
-
+- F done 
 
 Technologie:
 
