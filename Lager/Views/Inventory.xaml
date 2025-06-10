@@ -1,48 +1,67 @@
 <?xml version="1.0" encoding="utf-8" ?>
-
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MeineApp.Views.Inventory"
-             Title="Lagerbestand">
+             x:Class="Lager.Views.ProductListPage"
+             Title="Produktbestand Übersicht">
 
-    <StackLayout Padding="10">
+    <Grid RowDefinitions="Auto, *"
+          ColumnDefinitions="*, Auto"
+          Padding="20">
 
-        <Button Text="Produkte laden"
-            Command="{Binding LadeProdukteCommand}"
-            Margin="0,0,0,10" />
+        <Image Grid.Row="0" Grid.Column="1"
+               Source="products.png"
+               HeightRequest="100"
+               WidthRequest="100"
+               HorizontalOptions="End"
+               VerticalOptions="Start"
+               Aspect="AspectFit"
+               Margin="0,0,0,10"/>
 
-        <CollectionView ItemsSource="{Binding ProduktListe}">
+        <VerticalStackLayout Grid.Row="1" Grid.ColumnSpan="2" Spacing="24">
 
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Frame Padding="10"
-                 Margin="5"
-                 BackgroundColor="White"
-                 CornerRadius="10">
+            <Label Text="Produktbestand Übersicht"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   TextColor="Yellow"
+                   HorizontalOptions="Center"/>
 
-                        <StackLayout>
+            <!-- Beispiel für ein einzelnes Produkt (statisch) -->
+            <Grid RowDefinitions="Auto, Auto, Auto, Auto"
+                  ColumnDefinitions="Auto, *"
+                  ColumnSpacing="12"
+                  RowSpacing="8">
+                <Label Text="ID:"
+                       Grid.Row="0" Grid.Column="0"
+                       FontSize="16"
+                       FontAttributes="Bold"/>
+                <Label Text="1"
+                       Grid.Row="0" Grid.Column="1"
+                       FontSize="16"/>
 
-                            <Label Text="{Binding ProductName}"
-                     FontAttributes="Bold"
-                     FontSize="18" />
+                <Label Text="Name:"
+                       Grid.Row="1" Grid.Column="0"
+                       FontSize="16"
+                       FontAttributes="Bold"/>
+                <Label Text="Beispielprodukt"
+                       Grid.Row="1" Grid.Column="1"
+                       FontSize="16"/>
 
-                            <Label Text="Artikelnummer: {Binding ArticleNumber}"
-                     FontSize="14" />
+                <Label Text="Preis:"
+                       Grid.Row="2" Grid.Column="0"
+                       FontSize="16"
+                       FontAttributes="Bold"/>
+                <Label Text="9,99"
+                       Grid.Row="2" Grid.Column="1"
+                       FontSize="16"/>
 
-                            <Label Text="Preis: {Binding ProductPrice, StringFormat='{}{0:C2}'}"
-                     FontSize="14" />
-
-                            <Label Text="Lagerbestand: {Binding ProductStock}"
-                     FontSize="14" />
-
-                        </StackLayout>
-
-                    </Frame>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-
-        </CollectionView>
-
-    </StackLayout>
-
+                <Label Text="Bestand:"
+                       Grid.Row="3" Grid.Column="0"
+                       FontSize="16"
+                       FontAttributes="Bold"/>
+                <Label Text="10"
+                       Grid.Row="3" Grid.Column="1"
+                       FontSize="16"/>
+            </Grid>
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>
